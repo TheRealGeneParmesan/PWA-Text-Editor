@@ -14,13 +14,13 @@ module.exports = () => {
       main: './src/js/index.js',
       install: './src/js/install.js'
     },
-    // Output for our bundles
+    // Output for bundles
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Webpack plugin that generates our HTML file and injects our bundles.
+      // Webpack plugin that generates HTML file and injects bundles.
 
       new HtmlWebpackPlugin({
         template: './index.html',
@@ -33,7 +33,26 @@ module.exports = () => {
         swDest: 'src-sw.js',
       }),
 
+      // Creates a manifest.json file
 
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Text Editor',
+        short_name: 'Editor',
+        description: 'A simple text editor',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        start_url: '/',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ],
+      }),
     ],
 
     module: {
