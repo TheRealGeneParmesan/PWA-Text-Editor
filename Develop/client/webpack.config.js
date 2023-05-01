@@ -8,22 +8,38 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = () => {
   return {
+    // Entry point for files
     mode: 'development',
     entry: {
       main: './src/js/index.js',
       install: './src/js/install.js'
     },
+    // Output for our bundles
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // Webpack plugin that generates our HTML file and injects our bundles.
+
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Text Editor'
+      }),
+
+      // Injects our custom service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+
+
     ],
 
     module: {
+      // CSS loaders
       rules: [
-        
+
       ],
     },
   };
