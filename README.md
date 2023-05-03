@@ -15,6 +15,10 @@ This project utilizes the express package, the if-env package, concurrently, and
 
 ## Usage
 
+You can find my application here:
+
+https://jeremys-pwa-text-editor.herokuapp.com/
+
 Here is a screenshot of the app's manifest.json file
 
 ![image](https://user-images.githubusercontent.com/119083185/236056321-7307ab9a-1e7e-40aa-9450-a71ac0311798.png)
