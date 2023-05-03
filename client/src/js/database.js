@@ -1,6 +1,6 @@
 import { openDB } from 'idb';
 
-const initdb = async () => {
+const initdb = async () =>
   // Creating a new database named jate which will be using version 1 of the database. 
   openDB('jate', 1, {
     // Add our database schema if it has not already been initialized. 
@@ -15,9 +15,6 @@ const initdb = async () => {
     },
   });
 
-  return jateDb;
-
-};
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
@@ -32,7 +29,7 @@ export const putDb = async (content) => {
   const request = store.put({ id: 1, value: content });
 
   const result = await request;
-  console.log('🚀 - data saved to the database', result);
+  console.log('🚀 - data saved to the database', result.value);
 }
 
 
