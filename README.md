@@ -15,6 +15,16 @@ This project utilizes the express package, the if-env package, concurrently, and
 
 ## Usage
 
+Here is a screenshot of the app's manifest.json file
+
+![image](https://user-images.githubusercontent.com/119083185/236056321-7307ab9a-1e7e-40aa-9450-a71ac0311798.png)
+
+And a screenshot of the app's IndexedDB storage
+
+![image](https://user-images.githubusercontent.com/119083185/236056532-aefd29d6-3d18-406e-93bc-54be8f2ad8ee.png)
+
+
+
 GIVEN a text editor web application
 
 WHEN I open my application in my editor
@@ -56,18 +66,6 @@ THEN I download my web application as an icon on my desktop
 WHEN I load my web application
 
 THEN I should have a registered service worker using workbox
-
-You can find a screenshot here:
-
-![image](https://user-images.githubusercontent.com/119083185/236056140-adad3594-0630-41c9-885d-0e4b4fc7de44.png)
-
-Here is a screenshot of the app's manifest.json file
-
-![image](https://user-images.githubusercontent.com/119083185/236056321-7307ab9a-1e7e-40aa-9450-a71ac0311798.png)
-
-And a screenshot of the app's IndexedDB storage
-
-![image](https://user-images.githubusercontent.com/119083185/236056532-aefd29d6-3d18-406e-93bc-54be8f2ad8ee.png)
 
 
 ## Tests
